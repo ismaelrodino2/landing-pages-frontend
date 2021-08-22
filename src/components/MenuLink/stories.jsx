@@ -1,15 +1,12 @@
 import { MenuLink } from '.';
 
-export default {
-  args: {
+export const Template = () => {
+  const args = {
     children: 'MenuLink',
     link: 'https://www.google.com.br/',
-  },
-};
-
-export const Template = (args) => {
+  };
   return (
-    <div>
+    <div className="flex">
       <MenuLink {...args} />
     </div>
   );

@@ -2,9 +2,12 @@ import P from 'prop-types';
 
 export const MenuLink = ({ children, link, newTab = false }) => {
   const target = newTab ? '_blank' : '_self';
-  console.log(children);
   return (
-    <a href={link} target={target}>
+    <a
+      href={link}
+      target={target}
+      className="block px-3 py-3 no-underline sm:py-0 hover:text-gray-600"
+    >
       {children}
     </a>
   );
