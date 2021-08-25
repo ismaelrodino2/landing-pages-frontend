@@ -3,7 +3,7 @@ import { MenuLink } from '../MenuLink';
 
 export const NavLinks = ({ links = [] }) => {
   return (
-    <div className="flex flex-col items-center h-full py-3 text-center sm:flex-wrap sm:flex-row">
+    <div className="flex flex-col items-center h-full py-3 text-center sm:flex-wrap sm:flex-row ">
       {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}

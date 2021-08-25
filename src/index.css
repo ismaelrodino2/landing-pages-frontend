@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-main{
-    @apply container px-4 mx-auto
+.container-main {
+  @apply container px-4 mx-auto;
+}
+
+.container-secondary {
+    @apply container lg:max-w-md flex items-center
 }
