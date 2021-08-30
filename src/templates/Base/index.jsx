@@ -5,7 +5,7 @@ export const Base = ({ links = [], logoData, footerHtml, children }) => {
   return (
     <>
       <Menu links={links} logoData={logoData} />
-      <div className="pt-12">
+      <div className="md:pt-12">
         {children}
         <Footer html={footerHtml} />
       </div>
