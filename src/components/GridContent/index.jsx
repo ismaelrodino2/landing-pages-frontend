@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import { SectionBackground } from '../SectionBackground';
 
-export const GridTwoColumn = ({ title, html, background }) => {
+export const GridContent = ({ title, html, background }) => {
   return (
     <SectionBackground background={(background = true)}>
       <div className="flex flex-col self-center text-center container-secondary">
@@ -11,7 +11,7 @@ export const GridTwoColumn = ({ title, html, background }) => {
     </SectionBackground>
   );
 };
-GridTwoColumn.propTypes = {
+GridContent.propTypes = {
   title: P.string.isRequired,
   html: P.string.isRequired,
   background: P.bool,

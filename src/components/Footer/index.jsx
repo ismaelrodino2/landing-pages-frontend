@@ -4,7 +4,7 @@ export const Footer = ({ html }) => {
   return (
     <div>
       <div
-        className="flex justify-center py-12 container-main"
+        className="flex justify-center py-6 container-main"
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
     </div>
