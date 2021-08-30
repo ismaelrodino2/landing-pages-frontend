@@ -2,11 +2,8 @@ import P from 'prop-types';
 
 export const LogoLink = ({ text, srcImg = '', link }) => {
   return (
-    <div>
-      <a
-        href={link}
-        className="flex justify-center text-5xl font-bold uppercase"
-      >
+    <div className="self-center w-1/5">
+      <a href={link} className="text-5xl font-bold uppercase">
         {!!srcImg && <img className="max-h-10" src={srcImg} alt={text} />}
         {!srcImg && text}
       </a>

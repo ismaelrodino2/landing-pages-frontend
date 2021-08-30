@@ -16,6 +16,10 @@ import { PageNotFound } from './templates/PageNotFound';
 import { Loading } from './templates/Loading';
 import { Base } from './templates/Base';
 import { Load } from './templates/Loading/stories';
+import { GridTwoColumn } from './components/GridTwoColumn';
+import { GridContent } from './components/GridContent';
+import { GridText } from './components/GridText';
+import { GridImage } from './components/GridImage';
 
 function App() {
   const [data, setData] = useState([]);
@@ -44,9 +48,34 @@ function App() {
     return <Load />;
   }
 
+  const { menu, sections, footerHtml, slug } = data;
+  const { links, text, link, srcImg } = menu;
+
   return (
     <div>
-      <Template12 />
+      <Base
+        links={links}
+        footerHtml={footerHtml}
+        logoData={{ text, link, srcImg }}
+      >
+        {sections.map((section, index) => {
+          const { component } = section;
+          const key = `${slug}-${index}`;
+          console.log(component);
+          if (component === 'section.section-two-columns') {
+            return <GridTwoColumn key={key} {...section} />;
+          }
+          if (component === 'section.section-content') {
+            return <GridContent key={key} {...section} />;
+          }
+          if (component === 'section.section-grid-text') {
+            return <GridText key={key} {...section} />;
+          }
+          if (component === 'section.section-grid-image') {
+            return <GridImage key={key} {...section} />;
+          }
+        })}
+      </Base>
     </div>
   );
 }
