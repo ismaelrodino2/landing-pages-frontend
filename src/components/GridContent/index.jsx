@@ -3,7 +3,7 @@ import { SectionBackground } from '../SectionBackground';
 
 export const GridContent = ({ title, html, background }) => {
   return (
-    <SectionBackground background={(background = true)}>
+    <SectionBackground background={background}>
       <div className="flex flex-col self-center text-center container-secondary">
         <h1 className="py-8 text-4xl font-bold uppercase">{title}</h1>
         <div id="paragraphs" dangerouslySetInnerHTML={{ __html: html }}></div>

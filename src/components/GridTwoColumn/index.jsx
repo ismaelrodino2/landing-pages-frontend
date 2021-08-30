@@ -4,7 +4,7 @@ import { SectionBackground } from '../SectionBackground';
 export const GridTwoColumn = ({ title, text, srcImg, background }) => {
   return (
     <div>
-      <SectionBackground background={(background = false)}>
+      <SectionBackground background={background}>
         <div className="flex flex-col items-center md:flex-row container-main">
           <div className="lg:w-1/3 md:w-2/4">
             <h1 className="text-3xl uppercase md:text-7xl bold py-11">

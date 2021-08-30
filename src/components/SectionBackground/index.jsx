@@ -1,6 +1,6 @@
 import P from 'prop-types';
 
-export const SectionBackground = ({ children, background = true }) => {
+export const SectionBackground = ({ children, background }) => {
   return (
     <div
       background={background}

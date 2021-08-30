@@ -3,7 +3,7 @@ import { SectionBackground } from '../SectionBackground';
 
 export const GridImage = ({ title, background, description, grid }) => {
   return (
-    <SectionBackground background={(background = false)}>
+    <SectionBackground background={background}>
       <div className="container">
         <h1 className="mb-4 text-4xl font-bold md:text-5xl">{title}</h1>
         <p className="pb-20 md:text-lg">{description}</p>
