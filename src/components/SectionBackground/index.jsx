@@ -8,7 +8,7 @@ export const SectionBackground = ({ children, background, sectionId }) => {
   return (
     <div
       background={background}
-      className={background ? 'bg-black text-white' : 'bg-white text-black'}
+      className={background ? 'bg-primary text-white' : 'bg-white text-black'}
       id={id}
     >
       <div className="flex flex-col justify-center min-h-screen container-main ">

@@ -14,7 +14,7 @@ export const Menu = ({ links = [], logoData }) => {
     <>
       <div
         onClick={() => setVisible(!visible)}
-        className="fixed z-20 flex items-center justify-center w-16 h-16 text-white bg-black top-8 right-8 sm:hidden"
+        className="fixed z-20 flex items-center justify-center w-16 h-16 text-white bg-primary top-8 right-8 sm:hidden"
       >
         {visible ? (
           <CloseIcon aria-label="Close menu" className="w-10 h-10" />
@@ -26,11 +26,11 @@ export const Menu = ({ links = [], logoData }) => {
         <div
           className={
             visible
-              ? 'items-center flex h-screen  teste sm:h-auto bg-white'
+              ? 'items-center flex h-screen sm:h-auto'
               : 'invisible sm:visible sm:h-auto bg-white sm:bg-white'
           }
         >
-          <div className="flex flex-col sm:flex-row container-main sm:flex sm:justify-between">
+          <div className="flex flex-col bg-white sm:flex-row container-main sm:flex sm:justify-between">
             <LogoLink {...logoData} />
             <NavLinks links={links} />
           </div>
