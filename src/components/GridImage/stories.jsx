@@ -6,7 +6,7 @@ export const Template10 = () => {
   const args = mock;
   return (
     <div>
-      <GridImage {...args} />
+      <GridImage />
     </div>
   );
 };
