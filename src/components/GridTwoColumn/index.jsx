@@ -1,10 +1,16 @@
 import P from 'prop-types';
 import { SectionBackground } from '../SectionBackground';
 
-export const GridTwoColumn = ({ title, text, srcImg, background }) => {
+export const GridTwoColumn = ({
+  title,
+  text,
+  srcImg,
+  background,
+  sectionId = '',
+}) => {
   return (
     <div>
-      <SectionBackground background={background}>
+      <SectionBackground background={background} sectionId={sectionId}>
         <div className="flex flex-col items-center md:flex-row container-main">
           <div className="lg:w-1/3 md:w-2/4">
             <h1 className="text-3xl uppercase md:text-7xl bold py-11">
@@ -25,4 +31,5 @@ GridTwoColumn.propTypes = {
   text: P.string.isRequired,
   srcImg: P.string.isRequired,
   background: P.bool,
+  sectionId: P.string,
 };

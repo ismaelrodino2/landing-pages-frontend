@@ -1,9 +1,15 @@
 import P from 'prop-types';
 import { SectionBackground } from '../SectionBackground';
 
-export const GridText = ({ title, background, description, grid }) => {
+export const GridText = ({
+  title,
+  background,
+  description,
+  grid,
+  sectionId = '',
+}) => {
   return (
-    <SectionBackground background={background}>
+    <SectionBackground background={background} sectionId={sectionId}>
       <div className="container py-24">
         <h1 className="mb-4 text-4xl font-bold md:text-5xl">{title}</h1>
         <p className="pb-20 md:text-lg">{description}</p>
@@ -30,4 +36,5 @@ GridText.propTypes = {
     }),
   ).isRequired,
   background: P.bool,
+  sectionId: P.string,
 };
