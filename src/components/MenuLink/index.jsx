@@ -6,7 +6,7 @@ export const MenuLink = ({ children, link, newTab = false }) => {
     <a
       href={link}
       target={target}
-      className="block px-3 py-3 no-underline sm:py-0 hover:text-gray-600"
+      className="block px-3 py-3 no-underline sm:py-0 hover:text-gray"
     >
       {children}
     </a>
