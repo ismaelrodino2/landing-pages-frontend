@@ -20,7 +20,7 @@ export const GridImage = ({
               id="gridimg"
               key={`${el.srcImg}${el.altText}`}
             >
-              <img src={el.srcImg} alt={el.altText} />
+              <img src={el.srcImg} alt={el.altText} className="h-64" />
             </div>
           ))}
         </div>
